@@ -22,7 +22,7 @@ services:
       MYSQL_PASSWORD: bitrix
     volumes:
       - ./db_data:/var/lib/mysql
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --innodb-strict-mode=0
 
   phpmyadmin:
     image: phpmyadmin:latest
