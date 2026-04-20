@@ -24,3 +24,11 @@ www/bitrix/admin/
 # Конфиги с паролями
 www/bitrix/.settings.php
 www/bitrix/php_interface/dbconn.php
+
+www/bitrix/activities/
+www/bitrix/blocks/
+www/bitrix/gadgets/
+www/bitrix/panel/
+www/bitrix/themes/
+www/bitrix/tmp/
+www/bitrix/wizards/
