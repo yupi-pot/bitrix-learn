@@ -5,7 +5,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./www:/var/www/html
+      - ./www:/var/www/html:cached
       - ./config/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - db

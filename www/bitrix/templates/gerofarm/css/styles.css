@@ -70,3 +70,23 @@ body {
   padding: 20px 0;
   text-align: center;
 }
+
+.header__search {
+    display: flex;
+    gap: 8px;
+}
+
+.header__search input {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header__search button {
+    padding: 6px 16px;
+    background: #fff;
+    color: #1a1a2e;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}

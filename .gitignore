@@ -14,3 +14,13 @@ backup.sql
 # OS
 .DS_Store
 Thumbs.db
+
+# Битрикс ядро
+www/bitrix/modules/
+www/bitrix/components/
+www/bitrix/tools/
+www/bitrix/admin/
+
+# Конфиги с паролями
+www/bitrix/.settings.php
+www/bitrix/php_interface/dbconn.php
