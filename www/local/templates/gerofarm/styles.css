@@ -1,0 +1,75 @@
+/*
+ * styles.css — общие стили шаблона.
+ * Подгружаются ПЕРЕД template_styles.css. Используем для:
+ *   - CSS-переменных (дизайн-токены)
+ *   - reset / нормализации
+ *   - типографики
+ *   - утилит
+ */
+
+:root {
+    /* Цвета из дизайна Figma. Когда придёт финальный UI — обновим. */
+    --color-bg: #ffffff;
+    --color-surface: #ededed;
+    --color-text: rgba(0, 0, 0, 0.8);
+    --color-text-muted: rgba(0, 0, 0, 0.45);
+    --color-border: rgba(0, 0, 0, 0.1);
+
+    /* Радиусы. Большие — фирменная черта макета. */
+    --radius-pill: 100px;
+    --radius-card: 48px;
+    --radius-section: 88px;
+    --radius-footer: 72px;
+
+    /* Сетка */
+    --container-max: 1440px;
+    --container-padding: 32px;
+
+    /* Типографика. Пока system-ui — вопрос лицензии PP Neue Montreal к Саше открыт. */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+    /* Отступы блоков */
+    --gap-xs: 8px;
+    --gap-sm: 16px;
+    --gap-md: 24px;
+    --gap-lg: 48px;
+    --gap-xl: 96px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
