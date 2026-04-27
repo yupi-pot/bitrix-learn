@@ -1,18 +1,18 @@
 <?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-CModule::IncludeModule("iblock");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 ?>
 
-<?$APPLICATION->IncludeComponent(
+<? $APPLICATION->IncludeComponent(
     "bitrix:news.detail",
     "drug-detail",
-    array(
-        "IBLOCK_TYPE" => "gerofarm",
-        "IBLOCK_ID" => "5",
-        "ELEMENT_ID" => $_GET["ID"],
-        "CACHE_TYPE" => "N",
-        "PROPERTY_CODE" => array("MNN", "FORM", "INDICATIONS"),
-    )
-);?>
+    [
+        "IBLOCK_TYPE"   => "gerofarm",
+        "IBLOCK_ID"     => IBLOCK_DRUGS_ID,
+        "ELEMENT_ID"    => (int)($_GET["ID"] ?? 0),
+        "CACHE_TYPE"    => "A",
+        "CACHE_TIME"    => "3600",
+        "PROPERTY_CODE" => ["MNN", "FORM", "INDICATIONS"],
+    ]
+); ?>
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
