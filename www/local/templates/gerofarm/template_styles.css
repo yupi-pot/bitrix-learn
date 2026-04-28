@@ -242,3 +242,60 @@
     font-size: 16px;
     color: var(--color-text);
 }
+
+/* ============================================================
+   Pill button — переиспользуемая «таблетка» из дизайна.
+   --dark — белый текст на чёрном фоне (CTA в шапке секций).
+   ============================================================ */
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    height: 56px;
+    padding: 8px 32px;
+    border-radius: var(--radius-pill);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-pill--dark {
+    background: #000;
+    color: #fff;
+}
+
+.btn-pill--dark:hover {
+    background: #1a1a1a;
+}
+
+/* ============================================================
+   Home — Flagships
+   Секция «Лидеры на рынке препаратов» на главной.
+   Сами карточки стилизуются в шаблоне компонента flagships/style.css.
+   Здесь — только обёртка с заголовком и CTA-кнопкой.
+   ============================================================ */
+
+.home-flagships {
+    margin-top: var(--gap-xl);
+}
+
+.home-flagships__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.home-flagships__title {
+    margin: 0;
+    max-width: 656px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+}

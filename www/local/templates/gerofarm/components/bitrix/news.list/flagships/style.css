@@ -1,0 +1,50 @@
+/*
+ * Шаблон news.list/flagships — секция «Лидеры на рынке препаратов» на главной.
+ * Раскладка из Figma: 2 квадрата 684x470 в первом ряду + 1 широкая 1376x470 во втором.
+ * Третий элемент при нечётном количестве становится широким (grid-column: 1 / -1).
+ */
+
+.flagships-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.flagship {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 470px;
+    padding: 56px;
+    background: var(--color-surface);
+    border-radius: var(--radius-section);
+    color: var(--color-text);
+    box-sizing: border-box;
+}
+
+.flagship--wide {
+    grid-column: 1 / -1;
+}
+
+.flagship__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+}
+
+.flagship__text {
+    margin: 0;
+    align-self: flex-end;
+    width: 304px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+}
+
+.flagship--wide .flagship__text {
+    width: 272px;
+}
