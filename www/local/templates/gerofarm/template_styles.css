@@ -299,3 +299,68 @@
     letter-spacing: -0.023em;
     color: var(--color-text);
 }
+
+/* ============================================================
+   Home — Figures
+   Секция «ГЕРОФАРМ в цифрах» на главной.
+   Карточки стилизуются в шаблоне компонента figures/style.css.
+   Здесь — только обёртка с заголовком, описанием и CTA.
+   ============================================================ */
+
+.home-figures {
+    margin-top: var(--gap-xl);
+}
+
+.home-figures__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.home-figures__title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+}
+
+.home-figures__intro {
+    max-width: 472px;
+    margin: 0 0 48px auto;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--color-text);
+}
+
+/* ============================================================
+   Home — Social projects
+   Секция «Комплексный подход к решению социальных проблем».
+   Карточки стилизуются в шаблоне компонента social_projects/style.css.
+   Здесь — только обёртка с заголовком и CTA.
+   ============================================================ */
+
+.home-social {
+    margin-top: var(--gap-xl);
+}
+
+.home-social__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.home-social__title {
+    margin: 0;
+    max-width: 641px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+}
