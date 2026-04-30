@@ -31,7 +31,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
                     <li><a href="/about/expansion/">Международная экспансия</a></li>
                     <li><a href="/social/">Социальные проекты</a></li>
                     <li><a href="/esg/">ESG</a></li>
-                    <li><a href="/press/">Пресс-центр</a></li>
+                    <li><a href="/news/">Пресс-центр</a></li>
                     <li><a href="/career/">Карьера</a></li>
                     <li><a href="/labour-safety/">Охрана труда</a></li>
                 </ul>

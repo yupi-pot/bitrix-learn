@@ -1,0 +1,15 @@
+/*
+ * Шаблон news.list/main_news — стили только сетки.
+ * Карточка переиспользует .news-card* из template_styles.css.
+ */
+
+.main-news__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    align-items: start;
+}

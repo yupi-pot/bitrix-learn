@@ -364,3 +364,125 @@
     letter-spacing: -0.023em;
     color: var(--color-text);
 }
+
+/* ============================================================
+   Хлебные крошки (общий компонент)
+   ============================================================ */
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+}
+
+.breadcrumbs__item {
+    color: var(--color-text);
+}
+
+.breadcrumbs__item--muted {
+    opacity: 0.45;
+}
+
+.breadcrumbs__sep {
+    opacity: 0.45;
+}
+
+/* ============================================================
+   Страница «Пресс центр»
+   ============================================================ */
+
+.press-center {
+    padding-top: 43px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.press-center__title {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+}
+
+/* ============================================================
+   Карточка новости (общая, переиспользуется в /news/ и на главной)
+   ============================================================ */
+
+.news-card {
+    display: block;
+}
+
+.news-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: inherit;
+}
+
+.news-card__media {
+    aspect-ratio: 338 / 296;
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+}
+
+.news-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-card__date {
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.023em;
+    color: var(--color-text-muted);
+}
+
+.news-card__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+}
+
+.news-card__link:hover .news-card__title {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+/* ============================================================
+   Секция «Пресс-центр» на главной (Figma node 143:259)
+   ============================================================ */
+
+.home-press {
+    margin-top: var(--gap-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.home-press__title {
+    margin: 0;
+    max-width: 684px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+}
