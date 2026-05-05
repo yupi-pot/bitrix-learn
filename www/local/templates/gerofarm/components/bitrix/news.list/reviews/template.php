@@ -6,12 +6,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var CBitrixComponentTemplate $this */
 /** @global CMain $APPLICATION */
 
-// Swiper 11 через CDN. AddHeadString с defer гарантирует:
 // 1) не блокирует рендер страницы
 // 2) скрипты выполняются в порядке DOM после парсинга — Swiper раньше нашего init
-$APPLICATION->AddHeadString('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">');
-$APPLICATION->AddHeadString('<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>');
-$APPLICATION->AddHeadString('<script src="' . SITE_TEMPLATE_PATH . '/components/bitrix/news.list/reviews/script.js" defer></script>');
 
 $this->setFrameMode(true);
 ?>

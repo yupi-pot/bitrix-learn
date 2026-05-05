@@ -1,0 +1,66 @@
+/* ============================================================
+   Infrastructure slider component
+   ============================================================ */
+
+.infra-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.infra-item__num {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.infra-item__num svg {
+    display: block;
+}
+
+.infra-item__index {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+    pointer-events: none;
+}
+
+.infra-item__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 12px;
+}
+
+.infra-item__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.023em;
+    color: var(--color-text);
+    transition: opacity 0.3s;
+}
+
+.infra-item__desc {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.023em;
+    color: var(--color-text-muted);
+    transition: opacity 0.3s;
+}
+
+/* Неактивные элементы слегка приглушены */
+.infra-item:not(.infra-item--active) .infra-item__title,
+.infra-item:not(.infra-item--active) .infra-item__desc {
+    opacity: 0.45;
+}

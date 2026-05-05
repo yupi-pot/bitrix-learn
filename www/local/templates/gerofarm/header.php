@@ -4,11 +4,42 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
  * @global CMain $APPLICATION
  * @global CUser $USER
  */
+
+$pageTitle       = htmlspecialchars($APPLICATION->GetTitle());
+$pageDescription = htmlspecialchars((string)$APPLICATION->GetPageProperty("description"));
+$pageKeywords    = htmlspecialchars((string)$APPLICATION->GetPageProperty("keywords"));
+$pageRobots      = htmlspecialchars((string)$APPLICATION->GetPageProperty("robots") ?: "index, follow");
+$pageOgImage     = htmlspecialchars((string)$APPLICATION->GetPageProperty("og_image"));
+$canonicalUrl    = "https://" . $_SERVER["HTTP_HOST"] . $APPLICATION->GetCurPage();
 ?><!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
 <head>
     <?$APPLICATION->ShowHead();?>
+
     <title><?$APPLICATION->ShowTitle()?></title>
+
+    <?php if ($pageDescription): ?>
+    <meta name="description" content="<?= $pageDescription ?>">
+    <?php endif ?>
+
+    <?php if ($pageKeywords): ?>
+    <meta name="keywords" content="<?= $pageKeywords ?>">
+    <?php endif ?>
+
+    <meta name="robots" content="<?= $pageRobots ?>">
+
+    <!-- Open Graph -->
+    <meta property="og:type"  content="website">
+    <meta property="og:title" content="<?= $pageTitle ?>">
+    <meta property="og:url"   content="<?= htmlspecialchars($canonicalUrl) ?>">
+    <?php if ($pageDescription): ?>
+    <meta property="og:description" content="<?= $pageDescription ?>">
+    <?php endif ?>
+    <?php if ($pageOgImage): ?>
+    <meta property="og:image" content="<?= $pageOgImage ?>">
+    <?php endif ?>
+
+    <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
